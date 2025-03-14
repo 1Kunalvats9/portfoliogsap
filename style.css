@@ -266,6 +266,9 @@ footer{
     font-size: 50px;
 }
 @media (max-width:779px){
+    .navbar{
+        width: 100vw;
+    }
     #cursor{
         display: none;
     }
