@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: "Geist", sans-serif;
+    box-sizing: border-box;
+    color: rgb(253, 244, 255);
+}
+body{
+    background-color:#050405;
+    overflow-x: hidden;
+}
+.menu{
+    display: none;
+}
+#cursor{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(224, 191, 250);
+    border-radius: 50%;
+    position: fixed;
+    box-shadow: 0 0 40px 8px rgba(224, 191, 250,0.5);
+    z-index: 6;
+    opacity: 0.7;
+}
+.page1{
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+}
+.navbar{
+    width: 100%;
+    height: 4rem;
+    padding: 3rem 5rem;
+    background-color: #050405;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+#name{
+    color: #C2A4FF;
+    font-weight: 700;
+}
+.navbar h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+    /* transition-duration: 0.6s; */
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.3rem;
+}
+a{
+    text-decoration: none;
+    color: #FDF4FF;
+}
+ul li a{
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition-duration: 0.6;
+}
+.navbar ul li{
+    list-style-type: none;
+    padding: 4px;
+}
+.navbar ul li a:hover, .navbar h2:hover{
+    color: #C2A4FF;
+    transition-property: "color";
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.page1Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 4rem) ;
+    margin-top: 4rem;
+}
+
+.p1{
+    height: 97vh;
+}
+.left,.right{
+    width: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mid{
+    width: 64vw;
+    display: flex;
+    align-items: flex-end;
+    overflow:hidden;
+}
+.robo-container{
+    width: 95%;
+    height: 70vh;
+}
+.text-container{
+    margin-left: 200px;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p1 .text-container h3{
+    font-size: 2rem;
+    font-weight: 100;
+    color: #C2A4FF;
+    letter-spacing: 0.2rem;
+    line-height: 1.4;
+    margin-left: 0.2rem;
+}
+.p1 .text-container h2{
+    font-size: 5rem;
+    font-weight: 400;
+    color:#FDF4FF;
+    letter-spacing: 0.2rem;
+    line-height: 0.9;
+}
+.right .text-container{
+    margin-left: -8%;
+}
+.page2{
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    position: relative;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.aboutme{
+    height: 30vh;
+    width: 40vw;
+    position: absolute;
+    right: 5;
+    z-index: 15;
+}
+.aboutme h3{
+    font-size: 2rem;
+    font-weight: 100;
+    color: #C2A4FF;
+    letter-spacing: 0.2rem;
+    line-height: 1.4;
+    margin-left: 0.2rem;
+}
+.aboutme p{
+    color: #FDF4FF;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.page3{
+    width: 100vw;
+    height: 100vh;
+    background-color: #050405;
+    padding: 20px 5px;
+    font-size: 24vw;
+    overflow-x: hidden;
+}
+.mywork{
+    color: rgb(253, 244, 255);
+}
+.page4{
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+.project{
+    width: 60vw;
+    height: 35vh;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 25px 2px #0e0e0e13;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.pjInfo{
+    width: 65%;
+    height: 100%;
+}
+.pjInfo h1{
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+}
+.pjInfo h3{
+    font-weight: 100;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.534);
+}
+.pjInfo p{
+    font-weight: 200;
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+}
+.pjLinks{
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+.pjLinks a{
+    color: rgba(255, 255, 255, 0.734);
+    font-weight: 200;
+    cursor: pointer;
+}
+.pjLinks i{
+    margin-left: 10px;
+}
+.pjVid{
+    width: 35%;
+    height: 100%;
+    background-image: url("./assets/socially.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.pjVidgr{
+    background-image: url("./assets/gamingRedefined.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.pjVidgfg{
+    background-image: url("./assets/gfg.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.pjVidhj{
+    background-image: url("./assets/hj.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.pjVidgc{
+    background-image: url("./assets/gc.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+footer{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+@media (max-width:779px){
+    #cursor{
+        display: none;
+    }
+    #connect, .navbar ul{
+        display: none;
+    }
+    .fa-bar{
+        display: flex;
+        font-size: 2.7rem;
+        cursor: pointer;
+    }
+    .navbar{
+        padding: 4px 15px;
+    }
+    .right{
+        display: none;
+    }
+    .text-container{
+        margin-left: 2%;
+    }
+    .mid{
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+        align-items: flex-start;
+        height: 10vh;
+        padding-top: 3rem;
+    }
+    .page1Container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .aboutme{
+        margin-top: -100px;
+        margin-left: -40px;
+    }
+    .aboutme h3{
+        font-size: 1.1rem;
+    }
+    .aboutme p{
+        font-size: 1.3rem;
+        text-align: left;
+    }
+    .page3{
+        overflow-x: hidden;
+    }
+    .project{
+        width: 85vw;
+        height: 40vh;
+    }
+    .pjInfo{
+        width: 90%;
+    }
+    .pjInfo h1{
+        font-size: 1.6rem;
+    }
+    .pjInfo h3{
+        font-size: 1rem;
+    }
+    .pjInfo p{
+        font-size: 1rem;
+    }
+    .project{
+        flex-direction: column;
+        justify-content: center;
+        height: 56vh;
+
+        width: 75vw;
+    }
+    .pjVid{
+        width: 90%;
+        margin-top: 1.5rem;
+        border-radius: 10px;
+    }
+    .page4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5rem;
+    }
+}
+@media (min-width: 780px) {
+    .fa-bar, .menu {
+        display: none !important;
+    }
+}
