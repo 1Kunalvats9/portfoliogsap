@@ -8,6 +8,19 @@ let right = document.querySelector('.right')
 let aboutme = document.querySelector('.aboutme')
 let nav = document.querySelector('.navbar')
 let mywork = document.querySelector('.mywork')
+let foot = document.querySelector(".footer")
+foot.addEventListener('mouseenter',()=>{
+    gsap.to("#cursor",{
+        scale:0,
+        duration:0.4
+    })
+})
+foot.addEventListener('mouseleave',()=>{
+    gsap.to("#cursor",{
+        scale:1,
+        duration:0.4
+    })
+})
 p1mid.addEventListener('mouseenter',()=>{
     gsap.to("#cursor",{
         scale:0,
@@ -22,8 +35,8 @@ p1mid.addEventListener('mouseleave',()=>{
 })
 window.addEventListener("mousemove",(e)=>{
     gsap.to("#cursor",{
-        x:e.clientX,
-        y:e.clientY-30,
+        x:e.clientX-20,
+        y:e.clientY-20,
         duration:0.4,
     })
 })
@@ -78,7 +91,7 @@ tl.to(".left",{
     duration:2,
     scrollTrigger:{
         trigger:".page1",
-        start: "top top",   // Begin when the top of page1 reaches the top of the viewport
+        start: "top top",  
         end: "bottom top",
         scrub:1
     }
@@ -88,7 +101,7 @@ tl.to(".right",{
     duration:2,
     scrollTrigger:{
         trigger:".page1",
-        start: "top top",   // Begin when the top of page1 reaches the top of the viewport
+        start: "top top",  
         end: "bottom top",
         scrub:1
     }
@@ -100,38 +113,39 @@ tl.from(aboutme,{
     duration:2,
     scrollTrigger:{
         trigger:'.page2',
-        start:"top 70%",
-        end:"top 45%",
-        scrub:1
+        start:"top 90%",
+        end:"top 60%",
+        scrub:1,
     }
 })
 tl.to(".mid", {
-    x: "-30vw",  // Moves robo-container to the left
+    x: "-30vw",  
     duration: 1.5,
     y:"57vh",
     scale:2,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".page1",  // Start animation when scrolling starts
-      start: "top top",   // Begin when the top of page1 reaches the top of the viewport
-      end: "bottom top",  // End animation when page1 fully scrolls out
-      scrub: 1,           // Smooth transition while scrolling
+      trigger: ".page1",  
+      start: "top top 15%",
+      end: "bottom 25%",  
+      scrub: 1,          
     }
 });
 tl.to(".page3 h1",{
     transform : "translateX(-220%)",
     scrollTrigger:{
-        start:"top 20%",
+        start:"top 10%",
         trigger:".page3",
         scroller:'body',
-        end:"top -80%",
+        end:"top -60%",
         scrub: 2,
         pin:true
     }
 })
 tl.from(".one",{
-    x:200,
+    x:400,
     opacity:0,
+    transform: "rotate(-2deg)",
     stagger:1,
     scrollTrigger:{
         start:"top 50%",
@@ -142,9 +156,10 @@ tl.from(".one",{
     }
 })
 tl.from(".two",{
-    x:-200,
+    x:-400,
     opacity:0,
     stagger:1,
+    transform: "rotate(2deg)",
     scrollTrigger:{
         start:"top 30%",
         end:"top 10%",
@@ -154,11 +169,12 @@ tl.from(".two",{
     }
 })
 tl.from(".three",{
-    x:200,
+    x:400,
     opacity:0,
+    transform: "rotate(-2deg)",
     stagger:1,
     scrollTrigger:{
-        start:"top 0%",
+        start:"top -10%",
         end:"top -30%",
         trigger:".page4",
         scroller:'body',
@@ -166,24 +182,26 @@ tl.from(".three",{
     }
 })
 tl.from(".four",{
-    x:-200,
+    x:-400,
     opacity:0,
     stagger:1,
+    transform: "rotate(2deg)",
     scrollTrigger:{
-        start:"top -50%",
-        end:"top -70%",
+        start:"top -70%",
+        end:"top -85%",
         trigger:".page4",
         scroller:'body',
         scrub:2,
     }
 })
 tl.from(".five",{
-    x:200,
+    x:400,
     opacity:0,
     stagger:1,
+    transform: "rotate(-2deg)",
     scrollTrigger:{
-        start:"top -95%",
-        end:"top -120%",
+        start:"top -125%",
+        end:"top -140%",
         trigger:".page4",
         scroller:'body',
         scrub:2,
